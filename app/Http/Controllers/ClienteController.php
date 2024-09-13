@@ -70,4 +70,10 @@ class ClienteController extends Controller
         $cliente->delete();
         return redirect()->route('clientes.index')->with('success', 'Cliente excluído com sucesso.');
     }
+
+        public function show(Cliente $cliente)
+    {
+        return view('clientes.show', compact('cliente'));
+    }
+
 }
